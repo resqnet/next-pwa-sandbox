@@ -5,6 +5,4 @@ const withPWA = require("@imbios/next-pwa")({
   skipWaiting: true,
 });
 
-module.exports = withPWA({
-  reactStrinctMode: true,
-});
+module.exports = withPWA();

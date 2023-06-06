@@ -19,7 +19,8 @@ const Index = () => {
   const [subscription, setSubscription] = useState(null);
   const [registration, setRegistration] = useState(null);
 
-  useEffect(() => {
+  useEffect(() => {   
+    alert(window.isSecureContext);
     if (
       typeof window !== "undefined" &&
       "serviceWorker" in navigator &&
@@ -95,7 +96,7 @@ const Index = () => {
       <Head>
         <title>web push</title>
       </Head>
-      <h1>Next.js/PWA Test </h1>
+      <h1>Next.js/PWA Test</h1>
       <button onClick={subscribeButtonOnClick} disabled={isSubscribed}>
         Subscribe
       </button>
